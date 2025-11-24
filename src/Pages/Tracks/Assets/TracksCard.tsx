@@ -35,7 +35,7 @@ function TracksCard({ trackData }: Readonly<TracksCardProps>) {
 					</button> */}
 				</div>
 				{/* Back Side */}
-				<div
+				{/* <div
 					className={`${styles.cardSide} ${styles.backSide} ${styles.backfaceHidden}`}
 				>
 					<p className={styles.cardText}>{trackData.description}</p>
@@ -44,8 +44,8 @@ function TracksCard({ trackData }: Readonly<TracksCardProps>) {
 						// onClick={handleLearnMoreClick}
 					>
 						Go Back
-					</button> */}
-				</div>
+					</button>
+				</div> */};
 			</div>
 		</div>
 	);

@@ -11,7 +11,7 @@ const Sponsers = () => {
 			className="bg-transparent rounded-[8px] py-10 mx-[15vw] flex justify-center items-center flex-col"
 		>
 			<HeaderText text="SPONSORS" />
-			<div className="grid w-full gap-6 mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-sm:mt-10">
+			<div className="grid w-fit mx-auto gap-6 mt-10 grid-cols-1 sm:grid-cols-2  max-sm:mt-10">
 				{sponsorData.map((sponsor, index) => (
 					<div
 						key={index + sponsor.company}

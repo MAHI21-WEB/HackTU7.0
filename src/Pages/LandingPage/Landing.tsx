@@ -38,24 +38,24 @@ function Landing() {
 					7-8th Feb 2026
 				</h1>
 				<div className="mt-10 flex flex-col gap-5">
-					<div
-						className="apply-button"
-						data-hackathon-slug="hacktu7"
-						data-button-theme="dark"
-						style={{ height: "44px", width: "100%", maxWidth: "312px" }}
-					></div>
+					<div 
+						className="apply-button" 
+						data-hackathon-slug="hacktu7" 
+						data-button-theme="dark-inverted"
+						style={{height: 44, width: "100%", maxWidth: 312}}
+></div>
 					<button
-						className="font-space-grotesk hover:scale-105 transition-all font-light px-14 rounded-md py-3 bg-[#A0BED3]"
-						onClick={() => window.open("https://hacktu-6.devfolio.co/")}
+						className="font-space-grotesk  transition-all font-light px-14 rounded-md py-3 bg-[#A0BED3]"
+						//onClick={() => window.open("https://hacktu-6.devfolio.co/")}
 					>
-						Register Now
+						Registrations<br></br> Start on 28 November
 					</button>
-					<button
+					{/* <button
 						className="font-space-grotesk hover:scale-105 transition-all font-light px-14 rounded-md py-3  border text-white border-white"
 						onClick={() => window.open("https://submit.ccstiet.com/")}
 					>
 						Submit Idea
-					</button>
+					</button> */}
 				</div>
 				<div className="mt-7 flex gap-5 flex-col w-[80%]">
 					<Timer />

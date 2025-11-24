@@ -21,9 +21,9 @@
 	transition: transform 0.7s;
 }
 
-.cardContainer:hover {
+/* .cardContainer:hover {
 	transform: rotateY(180deg);
-}
+} */
 
 /* .learnMore,
 .goBack {

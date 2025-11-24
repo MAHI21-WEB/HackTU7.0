@@ -59,10 +59,24 @@ export default function NewNavbar() {
 					className="bg-transparent text-white border-none"
 					side="left"
 				>
-					<button className="mr-6 lg:flex ">
-						<CCSLogo />
+					<button className="w-full flex mb-4">
+						<CCSLogo className="h-8 ml-4"/>
+						
 						<span className="sr-only">HackTU</span>
 					</button>
+					
+					<button className="w-full flex mb-4">
+						
+						<ETHIndiaLogo className="h-8 ml-4" />
+						
+					</button>
+
+					<button className="w-full flex mb-4">
+						
+						<DevfolioLogo className="h-8 ml-4" />
+						
+					</button>
+
 					<div className="grid gap-2 py-6">
 						<button
 							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
@@ -141,8 +155,11 @@ export default function NewNavbar() {
 				}}
 			>
 				<CCSLogo />
+				<ETHIndiaLogo className="h-7 w-auto ml-4" />
+				<DevfolioLogo className="h-7 w-auto ml-4" />
 				<span className="ml-3">HackTU</span>
 			</button>
+			
 			<nav className="ml-auto hidden lg:flex gap-6">
 				<NavButton
 					text="ABOUT"
@@ -160,37 +177,12 @@ export default function NewNavbar() {
 					text="FAQs"
 					onClick={(e) => scrollToSection(e, "#faqs")}
 				/>
-				<NavButton
-					text="REGISTER"
-					className="bg-[#192C4C] hover:bg-blue-100  hover:text-[#192C4C] rounded-2xl px-7 mr-20 border-white border"
-					onClick={() => {
-						closeSidebar(); // Close the sidebar when the link is opened
-						window.open("https://hacktu-6.devfolio.co/");
-					}}
+				<NavButton 
+					text="SPONSORS"
+					onClick={(e) => scrollToSection(e, "#sponsors")}
 				/>
-				<div>
-					<a
-						id="mlh-trust-badge"
-						style={{
-							display: "block",
-							maxWidth: "70px",
-							minWidth: "50px",
-							position: "fixed",
-							right: "20px",
-							top: "0",
-							width: "10%",
-							zIndex: 10000,
-						}}
-						href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
-						target="_blank"
-					>
-						<img
-							src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
-							alt="Major League Hacking 2026 Hackathon Season"
-							style={{ width: "100%" }}
-						/>
-					</a>
-				</div>
+
+				
 			</nav>
 		</header>
 	);
@@ -201,6 +193,27 @@ function CCSLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
 		<img
 			src={ccLogo}
 			alt="logo"
+			{...props}
+		/>
+		
+	);
+}
+function ETHIndiaLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
+	return (
+		<img
+			src="https://res.cloudinary.com/dihvrhw07/image/upload/v1763654866/ethindia-light_libuqh.png"
+			alt="ETHINDIA LOGO"
+			onClick={() => window.open("https://ethindia.co")}
+			{...props}
+		/>
+	);
+}
+function DevfolioLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
+	return (
+		<img
+			src="https://res.cloudinary.com/dihvrhw07/image/upload/v1763654948/_Dark_uksuae.png"
+			alt="DEVFOLIO LOGO"
+			onClick={() => window.open("https://devfolio.co")}
 			{...props}
 		/>
 	);
