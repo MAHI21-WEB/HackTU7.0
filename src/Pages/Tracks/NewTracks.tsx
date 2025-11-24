@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "./NewTracks.module.css";
 import HeaderText from "@/components/ui/HeaderText";
 import { CircleChevronRight, CircleChevronLeft } from "lucide-react";
+import { TrackDataTypes } from "./Assets/TracksData";
 
 function NewTracks() {
 	const [active, setActive] = useState(3); // Center slide index
@@ -24,22 +25,7 @@ function NewTracks() {
 		>
 			<HeaderText text="TRACKS" />
 
-			{/* <div className={styles.slider}>
-			<div className={styles.cardsContainer}>
-				{trackData.map((track) => (
-					<div
-						key={track.title}
-						className={`${styles.cardWrapper} ${styles.active}`}
-						style={{
-							transform: "translateX(0px) scale(1)",
-							opacity: 1,
-						}}
-					>
-						<TracksCard trackData={track} />
-					</div>
-				))}
-			</div> */}
-
+			
 			<div className={styles.slider}>
 				<div className={styles.cardsContainer}>
 					{trackData.map((track: TrackDataTypes, index: number) => {
