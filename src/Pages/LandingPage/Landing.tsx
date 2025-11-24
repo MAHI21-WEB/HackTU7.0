@@ -8,16 +8,16 @@ import { useEffect } from "react";
 
 function Landing() {
 	useEffect(() => {
-		const script = document.createElement("script");
-		script.src = "https://apply.devfolio.co/v2/sdk.js";
-		script.async = true;
-		script.defer = true;
-		document.body.appendChild(script);
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
 
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, []);
 	return (
 		<div className="h-screen w-full flex justify-between items-center gap-7">
 			<LazyLoadImage
@@ -41,15 +41,10 @@ function Landing() {
 					<div 
 						className="apply-button" 
 						data-hackathon-slug="hacktu7" 
-						data-button-theme="dark-inverted"
+						data-button-theme="light"
 						style={{height: 44, width: "100%", maxWidth: 312}}
 ></div>
-					<button
-						className="font-space-grotesk  transition-all font-light px-14 rounded-md py-3 bg-[#A0BED3]"
-						//onClick={() => window.open("https://hacktu-6.devfolio.co/")}
-					>
-						Registrations<br></br> Start on 28 November
-					</button>
+					
 					{/* <button
 						className="font-space-grotesk hover:scale-105 transition-all font-light px-14 rounded-md py-3  border text-white border-white"
 						onClick={() => window.open("https://submit.ccstiet.com/")}

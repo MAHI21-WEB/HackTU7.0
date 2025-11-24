@@ -65,18 +65,7 @@ export default function NewNavbar() {
 						<span className="sr-only">HackTU</span>
 					</button>
 					
-					<button className="w-full flex mb-4">
-						
-						<ETHIndiaLogo className="h-8 ml-4" />
-						
-					</button>
-
-					<button className="w-full flex mb-4">
-						
-						<DevfolioLogo className="h-8 ml-4" />
-						
-					</button>
-
+					
 					<div className="grid gap-2 py-6">
 						<button
 							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
@@ -155,8 +144,7 @@ export default function NewNavbar() {
 				}}
 			>
 				<CCSLogo />
-				<ETHIndiaLogo className="h-7 w-auto ml-4" />
-				<DevfolioLogo className="h-7 w-auto ml-4" />
+				
 				<span className="ml-3">HackTU</span>
 			</button>
 			
@@ -198,23 +186,4 @@ function CCSLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
 		
 	);
 }
-function ETHIndiaLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
-	return (
-		<img
-			src="https://res.cloudinary.com/dihvrhw07/image/upload/v1763654866/ethindia-light_libuqh.png"
-			alt="ETHINDIA LOGO"
-			onClick={() => window.open("https://ethindia.co")}
-			{...props}
-		/>
-	);
-}
-function DevfolioLogo(props: Readonly<ImgHTMLAttributes<HTMLImageElement>>) {
-	return (
-		<img
-			src="https://res.cloudinary.com/dihvrhw07/image/upload/v1763654948/_Dark_uksuae.png"
-			alt="DEVFOLIO LOGO"
-			onClick={() => window.open("https://devfolio.co")}
-			{...props}
-		/>
-	);
-}
+
