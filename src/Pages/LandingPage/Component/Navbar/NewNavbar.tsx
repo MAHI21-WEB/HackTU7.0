@@ -97,20 +97,7 @@ export default function NewNavbar() {
 						>
 							TIMELINE
 						</button>
-						<button
-							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
-							onClick={(e) => scrollToSection(e, "#team", closeSidebar)} // Pass closeSidebar
-						>
-							TEAM
-						</button>
-						<button
-							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
-							onClick={(e) =>
-								scrollToSection(e, "#gallery", closeSidebar)
-							}
-						>
-							GALLERY
-						</button>
+						
 						<button
 							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
 							onClick={(e) =>
@@ -128,7 +115,7 @@ export default function NewNavbar() {
 						<button
 							className="flex w-full items-center p-2 text-lg font-semibold hover:bg-[#192C4C] rounded-md duration-300"
 							onClick={() => {
-								window.open("https://hacktu-6.devfolio.co/");
+								window.open("https://hacktu7.devfolio.co/");
 								closeSidebar(); // Close the sidebar when the link is opened
 							}}
 						>
@@ -168,6 +155,14 @@ export default function NewNavbar() {
 				<NavButton 
 					text="SPONSORS"
 					onClick={(e) => scrollToSection(e, "#sponsors")}
+				/>
+				<NavButton
+					text="REGISTER"
+					className="bg-[#192C4C] hover:bg-blue-100  hover:text-[#192C4C] rounded-2xl px-7 mr-20 border-white border"
+					onClick={() => {
+						closeSidebar(); // Close the sidebar when the link is opened
+						window.open("https://hacktu7.devfolio.co/");
+					}}
 				/>
 
 				
