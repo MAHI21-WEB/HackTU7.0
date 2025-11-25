@@ -1,9 +1,13 @@
 import aiPoweredLending from "./aiPoweredLending.png";
-import digitalFrontier from "./digitalFrontier.png";
+//import digitalFrontier from "./digitalFrontier.png";
 import ecoCity from "./ecoCity.png";
 import health from "./health.png";
-import learnSphere from "./learnSphere.png";
-import openSus from "./openSustainaibility.png";
+//import learnSphere from "./learnSphere.png";
+import water from "./waterHook.png";
+//import openSus from "./openSustainaibility.png";
+import machine from "./machineArm.png";
+import globe from "./climateGlobe.png";
+import community from "./community.png";
 
 export type TrackDataTypes = {
 	imageSrc: string;
@@ -14,14 +18,14 @@ export type TrackDataTypes = {
 
 export const data: TrackDataTypes[] = [
 	{
-	 	imageSrc: openSus,
+	 	imageSrc: globe,
 	 	title: "Climate Action",
 	 	subTitle: "",
 	 	description:
 	 		"Initiatives and projects aimed at combating climate change and promoting environmental sustainability.",
 	},
 	{
-		imageSrc: ecoCity,
+		imageSrc: aiPoweredLending,
 		title: "Partnering for the Goals",
 		subTitle: "",
 		description:
@@ -35,14 +39,14 @@ export const data: TrackDataTypes[] = [
 			"Projects focused on improving health outcomes, healthcare access, and overall well-being.",
 	},
 	{
-		imageSrc: learnSphere,
+		imageSrc: water,
 		title: "Life below Water",
 		subTitle: "",
 		description:
 			"Conservation and sustainable use of oceans, seas, and marine resources for sustainable development.",
 	},
 	{
-		imageSrc: digitalFrontier,
+		imageSrc: machine,
 		title: "Responsible Consumption and Production",
 		subTitle: "",
 		description:
@@ -56,7 +60,7 @@ export const data: TrackDataTypes[] = [
 			"Building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation.",
 	},
 	{
-		imageSrc: openSus,
+		imageSrc: community,
 		title: "Sustainable Cities and Communities",
 		subTitle: "",
 		description:
