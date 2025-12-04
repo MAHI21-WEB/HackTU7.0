@@ -34,26 +34,26 @@ export default function Timer() {
 	}, [targetDate]); // Removed `targetDate` dependency as it doesn't change
 
 	return (
-		<div className="flex flex-col items-center mt-7 gap-5">
+		<div className="flex flex-col items-center mt-7 gap-5 w-full">
 			<h1 className="text-4xl text-transparent text-center font-bold live-in">
 				LIVE IN
 			</h1>
-			<div className="flex gap-4 text-xl max-sm:text-md text-[#A0BED3] font-bold">
-				<div className="border-2 flex justify-center items-center flex-col rounded-xl py-4 px-4 border-[#A0BED3]">
-					<h1 className="font-bold text-xl text-white">{time.days}</h1>
-					<p>days</p>
+			<div className="flex flex-wrap gap-3 text-lg sm:text-xl text-[#A0BED3] font-bold justify-center">
+				<div className="border-2 flex-shrink-0 flex justify-center items-center flex-col rounded-xl py-3 px-3 sm:py-4 sm:px-4 border-[#A0BED3] min-w-[64px]">
+					<h1 className="font-bold text-lg sm:text-xl text-white">{time.days}</h1>
+					<p className="text-sm">days</p>
 				</div>
-				<div className="border-2 flex justify-center items-center flex-col rounded-xl py-4 px-4 border-[#A0BED3]">
-					<h1 className="font-bold text-xl text-white">{time.hours}</h1>
-					<p>hours</p>
+				<div className="border-2 flex-shrink-0 flex justify-center items-center flex-col rounded-xl py-3 px-3 sm:py-4 sm:px-4 border-[#A0BED3] min-w-[64px]">
+					<h1 className="font-bold text-lg sm:text-xl text-white">{time.hours}</h1>
+					<p className="text-sm">hours</p>
 				</div>
-				<div className="border-2 flex justify-center items-center flex-col rounded-xl py-4 sm:px-5 px-4 border-[#A0BED3]">
-					<h1 className="font-bold text-xl text-white">{time.mins}</h1>
-					<p>mins</p>
+				<div className="border-2 flex-shrink-0 flex justify-center items-center flex-col rounded-xl py-3 px-3 sm:py-4 sm:px-5 border-[#A0BED3] min-w-[64px]">
+					<h1 className="font-bold text-lg sm:text-xl text-white">{time.mins}</h1>
+					<p className="text-sm">mins</p>
 				</div>
-				<div className="hidden border-2 sm:flex justify-center items-center flex-col rounded-xl py-4 sm:px-5 px-4 border-[#A0BED3]">
-					<h1 className="font-bold text-xl text-white">{time.secs}</h1>
-					<p>secs</p>
+				<div className="hidden sm:flex border-2 flex-shrink-0 justify-center items-center flex-col rounded-xl py-3 sm:py-4 sm:px-5 px-4 border-[#A0BED3] min-w-[64px]">
+					<h1 className="font-bold text-lg sm:text-xl text-white">{time.secs}</h1>
+					<p className="text-sm">secs</p>
 				</div>
 			</div>
 			<style>{`

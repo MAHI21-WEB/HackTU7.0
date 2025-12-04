@@ -6,7 +6,7 @@ const About = () => {
 	return (
 		<div
 			id="about"
-			className="min-h-screen flex flex-col justify-center items-center gap-7 py-20 px-4 sm:px-6 lg:px-8"
+			className="flex flex-col justify-center items-center gap-7 px-4 sm:px-6 lg:px-8"
 		>
 			<HeaderText text="ABOUT" />
 			<div className="flex flex-col lg:flex-row justify-center items-center max-w-7xl mx-auto gap-8 lg:gap-16">

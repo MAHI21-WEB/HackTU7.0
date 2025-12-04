@@ -57,12 +57,13 @@ const TwinklingBackground: React.FC<TwinklingBackgroundProps> = ({
 	}, [numDots]);
 
 	return (
-		<div className="relative w-full h-screen">
-			{/* Background Layer */}
+		<div className="relative w-full min-h-screen">
+			{/* Background Layer*/}
 			<div
 				ref={containerRef}
-				className="fixed top-0 left-0 w-screen h-screen -z-50 overflow-hidden"
+				className="fixed top-0 left-0 w-full h-full min-h-screen -z-50 overflow-hidden"
 				style={{ backgroundColor }}
+				
 			/>
 			{/* Content Layer */}
 			<div className="relative z-10">{children}</div>

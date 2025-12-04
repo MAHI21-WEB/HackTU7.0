@@ -7,8 +7,24 @@ import { ImgHTMLAttributes, useState } from "react";
 import { useNavigate } from "react-router";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollToPlugin);
+
+const navAnimation = {
+  initial: { y: "-200%" },
+  animate: {
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.33, 1, 0.68, 1],
+      delay: 3.8,        // ⏳ triggers AFTER preloader
+    },
+  },
+};
+
+
+
 
 const scrollToSection = (
 	e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -34,7 +50,12 @@ export default function NewNavbar() {
 	const closeSidebar = () => setIsSidebarOpen(false);
 
 	return (
-		<header className="fixed flex z-50 w-full shrink-0 items-center py-5 px-8 backdrop-blur-lg bg-transparent text-white">
+		<motion.header
+      variants={navAnimation}
+      initial="initial"
+      animate="animate"
+      className="fixed flex z-50 w-full shrink-0 items-center py-5 px-8 backdrop-blur-lg bg-transparent text-white"
+    >
 			<Sheet
 				open={isSidebarOpen}
 				onOpenChange={setIsSidebarOpen}
@@ -164,10 +185,32 @@ export default function NewNavbar() {
 						window.open("https://hacktu7.devfolio.co/");
 					}}
 				/>
-
+				<div>
+					<a
+						id="mlh-trust-badge"
+						style={{
+							display: "block",
+							maxWidth: "70px",
+							minWidth: "50px",
+							position: "fixed",
+							right: "20px",
+							top: "0",
+							width: "10%",
+							zIndex: 10000,
+						}}
+						href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+						target="_blank"
+					>
+						<img
+							src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
+							alt="Major League Hacking 2026 Hackathon Season"
+							style={{ width: "100%" }}
+						/>
+					</a>
+				</div>
 				
 			</nav>
-		</header>
+		</motion.header>
 	);
 }
 
