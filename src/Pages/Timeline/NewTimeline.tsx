@@ -5,7 +5,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { timelineElements } from "./timelineElements";
 
-export default function NewTimeline() {
+export default function () {
   return (
     <div className="font-sans text-center">
       <VerticalTimeline lineColor={"#64a443"}>

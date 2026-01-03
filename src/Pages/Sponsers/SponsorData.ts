@@ -13,6 +13,12 @@ export const sponsorData = [
       "https://res.cloudinary.com/dihvrhw07/image/upload/v1763642740/Devfolio_Logo-Colored_edwgm5.png",
     onclick: "https://devfolio.co",
   },
+  {
+    company: "GitHub",
+    info: "Hackathon Partner",
+    image: "https://res.cloudinary.com/dqvlvgmno/image/upload/v1767411571/GitHub_Logo_pzoafw.png",
+    onclick: "https://github.com",
+  },
 
   //{
   //	company: "MLH",

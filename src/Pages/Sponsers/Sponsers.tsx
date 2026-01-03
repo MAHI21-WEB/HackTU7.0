@@ -15,7 +15,7 @@ const Sponsers = () => {
         {sponsorData.map((sponsor, index) => (
           <div
             key={index + sponsor.company}
-            className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-slate-400/80"
+            className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-slate-400/80 sm:odd:last:col-span-2 sm:odd:last:justify-self-center"
           >
             <LazyLoadImage
               src={sponsor.image}
